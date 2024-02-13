@@ -1,5 +1,4 @@
-import sys
-
+import random
 from base.base_test import BaseTest
 
 
