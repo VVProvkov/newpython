@@ -1,8 +1,6 @@
 
 import time
-import sys
 
-sys.path.append("../newpython")
 
 
 from pages.base_page import BasePage
