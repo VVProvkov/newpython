@@ -1,10 +1,10 @@
 import random
 from base.base_test import BaseTest
+import pytest
 
+class TestProfileFeature(BaseTest):
 
-class ProfileFeatureTests(BaseTest):
-
-
+    @pytest.mark.smoke
     def test_chancge_profile_name(self):
         self.login_page.open()
         self.login_page.enter_login(self.data.LOGIN)
