@@ -7,8 +7,8 @@ class LoginPage(BasePage):
     PAGE_URL = Links.LOGIN_PAGE
 
     USERNAME_FIELD = ("xpath", "//input[@name='username']")
-    PASSWORD_FIELD = ("xpath", "//input[@password='password']")
-    SUBMIT_BUTTON = ("xpath", "//button[@password='submit']")
+    PASSWORD_FIELD = ("xpath", "//input[@name='password']")
+    SUBMIT_BUTTON = ("xpath", "//button[@type='submit']")
 
 
     def enter_login(self, login):
