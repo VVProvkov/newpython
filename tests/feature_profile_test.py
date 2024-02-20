@@ -1,13 +1,13 @@
 import random
 import allure
-from base.base_test import BaseTest
 import pytest
+from base.base_test import BaseTest
 
-@allure.feature("Profile Functionnality")
+@allure.feature("Profile Functionality")
 class TestProfileFeature(BaseTest):
 
-    @allure.feature("Change profile name")
-    @allure.feature("Critical")
+    @allure.title("Change profile name")
+    @allure.severity("Critical")
     @pytest.mark.smoke
     def test_change_profile_name(self):
         self.login_page.open()
@@ -20,3 +20,4 @@ class TestProfileFeature(BaseTest):
         self.personal_page.change_name(f"Test {random.randint(1, 100)}")
         self.personal_page.save_changes()
         self.personal_page.is_changes_saved()
+        self.personal_page.make_screenshot("Success")
